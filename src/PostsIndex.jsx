@@ -1,6 +1,6 @@
 // PostsIndex Component
 export function PostsIndex(props) {
-  console.log(props); // Logs the props for debugging
+  console.log(props.posts); // Logs the props for debugging
 
   return (
     <div>

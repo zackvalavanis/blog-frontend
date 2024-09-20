@@ -6,12 +6,22 @@ import { useState, useEffect } from 'react';
 
 export function PostsPage() {
   const [ posts, setPosts ] = useState([]);
+  const [isPostsShowVisible, setIsPostsShowVisible] = useState(false);
 
   const handleIndex = () => { 
     axios.get("http://localhost:3000/posts.json").then(response => { 
       console.log(response.data);
       setPosts(response.data);
     });
+  }
+
+  const handleShow = () => { 
+    console.log('hello');
+    setIsPostsShowVisible(true);
+  }
+
+  const handleClose = () => { 
+    setIsPostsShowVisible(false);
   }
   
 
@@ -20,12 +30,11 @@ export function PostsPage() {
 
   return (
     <div>
-      <PostsIndex posts={posts} />
+      <PostsIndex posts={posts} onShow={handleShow} />
       <PostsNew />
-      <Modal show={true}>
+      <Modal show={isPostsShowVisible} onClose={handleClose}>
       <p>TEST</p>
       </Modal>
-      <button onClick={handleIndex}>Get Data</button>
     </div>
   );
 }

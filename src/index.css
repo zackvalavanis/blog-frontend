@@ -45,10 +45,9 @@ textarea {
   box-sizing: border-box;
 }
 
-input[type="file"] {
-  margin-bottom: 30px;
-  padding: 30px;
-  margin-left: 165px;
+input[type="img"] {
+  width: 50%;
+  margin-bottom: 20px;
 }
 
 input[type="submit"] {
@@ -122,4 +121,14 @@ footer {
   /* Space above the button */
   cursor: pointer;
   /* Cursor style */
+}
+
+button[type='submit']:hover {
+  background-color: rgb(203, 188, 188);
+}
+
+button[type='submit'] {
+  border: 1px groove black !important;
+  padding: 10px 20px;
+  background-color: lightgray;
 }

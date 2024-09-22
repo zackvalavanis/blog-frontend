@@ -21,10 +21,20 @@
 }
 
 .modal-main button.close {
-  font-size: 2em;
+  font-size: 20px;
   background: none;
   border: none;
   position: absolute;
   top: 0em;
-  right: 0.2em;
+  right: 0.1em;
+  color: rgb(179, 50, 50);
+}
+
+.bodyModal {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+button [type='info']:hover {
+  background-color: rgba(255, 0, 0, 0.6);
 }
